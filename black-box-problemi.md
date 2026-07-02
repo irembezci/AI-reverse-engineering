@@ -157,3 +157,25 @@ Günümüzde büyük dil modelleri çok büyük miktarda bilgi içermektedir. An
 ## Düzenleyici ve Hukuki Zorluklar (Regulatory Challenges)
 
 Birçok düzenleme, otomatik karar verme sistemlerinden etkilenen bireylere belirli düzeyde açıklama sunulmasını gerektirmektedir. Fakat tamamen black box olarak çalışan bir sistem bu açıklamaları sağlamakta zorlanabilir. Bu durum özellikle GDPR Madde 22, Avrupa Birliği AI Act ve benzeri düzenlemeler kapsamında yapay zeka kullanan kuruluşlar için önemli hukuki ve uyumluluk sorunları oluşturabilmektedir.
+
+# Yapay Zeka Sistemlerinde Şeffaflığın Ölçülmesi
+
+Bir yapay zeka sisteminin black box olarak değerlendirilmesi, o sistemin ne kadar opak olduğu konusunda tek başına yeterli bilgi vermemektedir. İki farklı sistem aynı erişim kategorisinde yer alsa bile araştırmacıların bu sistemler hakkında sahip olduğu bilgi miktarı önemli ölçüde farklı olabilir.
+
+Bu durumu erişim seviyeleri üzerinden açıklayabiliriz. Bir uçta yalnızca API üzerinden erişilebilen, çıktı olasılıklarını göstermeyen ve kullanım kısıtlamalarına sahip sistemler yer almaktadır. Örneğin GPT-4 gibi modeller bu kategoriye yakın değerlendirilebilir. Buna karşılık açık ağırlıklı modellerde araştırmacılar model ağırlıklarına, mimarisine ve bazı durumlarda gradient bilgilerine erişebilmektedir. Spektrumun en şeffaf ucunda ise yalnızca model ağırlıklarının değil, kaynak kodunun, eğitim verilerinin ve geliştirme sürecine ilişkin bilgilerin de erişilebilir olduğu sistemler bulunmaktadır. Örneğin GPT-2 gibi açık şekilde yayınlanmış modeller üzerinde çok daha kapsamlı analizler gerçekleştirilebilmektedir.
+
+Bu nedenle iki sistem aynı kategoride yer alsa bile aynı derecede opak olmak zorunda değildir. Örneğin GPT-4, Claude ve Gemini teknik olarak black box sistemler olarak değerlendirilebilir. Ancak geliştiriciler tarafından yayınlanan teknik raporlar, sistem kartları, güvenlik değerlendirmeleri ve kullanım politikaları farklılık gösterebilmektedir. Sonuç olarak her üç sistem de black box olsa da araştırmacıların sistemler hakkında sahip olduğu görünürlük seviyesi aynı olmak zorunda değildir.
+
+Son yıllarda yapılan çalışmalar da şeffaflığı ikili bir özellik olarak değil, farklı boyutlarda değerlendirilebilen ve ölçülebilen bir özellik olarak ele almaktadır. Bu çalışmalardan biri Stanford Üniversitesi öncülüğünde geliştirilen Foundation Model Transparency Index (FMTI)'dir.
+
+![2025 Foundation Model Transparency Index (FMTI) sonuçları](images/fmti-2025.png)
+
+*Şekil: 2025 Foundation Model Transparency Index (FMTI) sonuçları. Grafik, farklı foundation model geliştiricilerinin upstream, model ve downstream alanlarındaki şeffaflık puanlarını göstermektedir. Kaynak: Foundation Model Transparency Index 2025.*
+
+FMTI, bir foundation model geliştiricisinin ne kadar şeffaf olduğunu değerlendirmek için veri toplama süreçlerinden model geliştirmeye ve dağıtım sonrası süreçlere kadar uzanan çok sayıda kriter kullanmaktadır. Çalışmada yalnızca model ağırlıklarının erişilebilir olup olmadığına bakılmamakta; eğitim verilerinin kaynakları, veri işleme süreçleri, kullanılan hesaplama kaynakları, model özellikleri, risk değerlendirmeleri, güvenlik önlemleri ve dağıtım sonrası uygulamalar gibi çok sayıda unsur da değerlendirilmektedir.
+
+Örneğin bir şirket modelin teknik özelliklerini ve benchmark sonuçlarını ayrıntılı şekilde paylaşabilir ancak modelin hangi verilerle eğitildiğini açıklamayabilir. Başka bir şirket eğitim verileri hakkında kapsamlı bilgiler sunabilir ancak güvenlik değerlendirmeleri veya risk azaltma mekanizmaları hakkında çok sınırlı bilgi paylaşabilir. Benzer şekilde iki model de black box olarak sınıflandırılabilir ancak bunlardan biri kapsamlı teknik raporlar, sistem kartları ve güvenlik değerlendirmeleri yayınlarken diğeri çok daha az bilgi sağlayabilir.
+
+FMTI sonuçları da foundation model geliştiricileri arasında önemli şeffaflık farklılıkları bulunduğunu göstermektedir. Bazı kuruluşlar veri toplama süreçleri, model özellikleri ve dağıtım sonrası uygulamalar hakkında daha kapsamlı bilgiler paylaşırken, bazı kuruluşlar bu alanlarda oldukça sınırlı görünürlük sağlamaktadır. Bu durum, yapay zeka sistemlerinin şeffaflığının tek boyutlu bir özellik olmadığını ve farklı alanlarda farklı düzeylerde değerlendirilmesi gerektiğini göstermektedir.
+
+Başka bir ifadeyle, bir modelin black box olması o sistem hakkında hiçbir şey bilinmediği anlamına gelmemektedir. Benzer şekilde açık ağırlıklı bir model de geliştirme süreci, eğitim verileri veya güvenlik değerlendirmeleri hakkında yeterli bilgi paylaşmıyorsa belirli açılardan opak kalmaya devam edebilir. Bu nedenle güncel literatürde şeffaflık, tek bir özellik olarak değil farklı boyutlardan oluşan ve ölçülebilen bir spektrum olarak ele alınmaktadır.
