@@ -9,9 +9,7 @@ Bir yapay zeka sistemi,
 - Modelin mimarisi veya parametreleri bilinmiyorsa,
 - Yalnızca girdiler ve çıktılar gözlemlenebiliyorsa,
 - Ara hesaplama süreçlerine erişilemiyorsa,
-- Sistem stokastik davranış sergileyerek aynı girdiye farklı çıktılar üretebiliyorsa
-
-**black box** olarak değerlendirilebilir.
+- Sistem stokastik davranış sergileyerek aynı girdiye farklı çıktılar üretebiliyorsa **black box** olarak değerlendirilebilir.
 
 "Black box" kavramı kökenini kontrol teorisinden almaktadır. Kontrol teorisinde black box, iç mekanizmaları bilinmeyen ancak girdi ve çıktı ilişkisi gözlemlenebilen sistemleri ifade etmek için kullanılır. Bu durumu günlük hayattan basit bir örnekle açıklayabiliriz. Kapalı bir kutunun içerisine bir nesne yerleştirildiğini düşünelim. Kutunun içine bakamıyoruz ve içinde ne olduğunu doğrudan göremiyoruz. Ancak kutuyu salladığımızda çıkan sesi duyabilir, ağırlığını hissedebilir veya vereceği diğer tepkileri gözlemleyebiliriz. Kutunun içinde tam olarak ne olduğunu bilmesek de bu gözlemlerden yola çıkarak içerisinde ne bulunabileceğine dair bazı çıkarımlarda bulunabiliriz. Black box yapay zeka sistemleri de benzer şekilde çalışır. Modelin iç işleyişini doğrudan göremesek bile farklı girdiler vererek üretilen çıktıları analiz ederek sistemin davranışlarını anlamaya çalışabiliriz. Özellikle ticari büyük dil modelleri incelenirken çoğu zaman araştırmacının erişebildiği tek şey modelin girdileri ve çıktılarıdır. Bu nedenle model davranışlarının anlaşılması ve güvenlik analizlerinin gerçekleştirilmesi büyük ölçüde gözlemlenen sonuçlara dayanır.
 
