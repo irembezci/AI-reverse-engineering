@@ -132,3 +132,28 @@ Deneme 5 → Daha fazla bilgi sızdırdı
 
 Bu örnekte saldırı istemi değişmemesine rağmen modelin verdiği yanıtlar farklılık göstermektedir. Bunun nedeni, büyük dil modellerinin çıktı üretim sürecinde belirli düzeyde stokastik davranış sergilemesidir. Sonuç olarak araştırmacılar bir yapay zekâ sisteminin güvenliğini yalnızca tek bir test sonucuna göre değerlendiremezler. Bunun yerine aynı saldırı birçok kez çalıştırılarak elde edilen sonuçlar istatistiksel olarak analiz edilir. Örneğin yukarıdaki senaryoda saldırı beş denemenin ikisinde başarılı olmuş ve yaklaşık %40'lık bir başarı oranı elde etmiştir.
 
+# Black Box Sistemlerin Yol Açtığı Zorluklar
+
+Black box problemi yalnızca teknik bir zorluk değildir. Yapay zeka sistemleri kredi değerlendirmeleri, işe alım süreçleri, sağlık hizmetleri ve kamu hizmetleri gibi önemli alanlarda kullanılmaya başladıkça, bu sistemlerin nasıl karar verdiğini anlayabilmek toplumsal bir gereklilik haline gelmiştir.
+
+## Hesap Verebilirlik Sorunu (Accountability Gap)
+
+Bir yapay zeka sisteminin bir kişinin kredi başvurusunu reddettiğini veya bir işe alım sürecinde adayı elendiğini düşünelim. Eğer sistemin bu kararı neden verdiği açıklanamıyorsa, olası bir hata veya ayrımcılık durumunda sorumluluğun kimde olduğu da belirsiz hale gelir. Karar verilmiştir ancak kararın nasıl oluştuğu ve kimin hesap vereceği net değildir.
+
+## Güvenlik ve Emniyet Riskleri (Safety Risk)
+
+Sağlık alanında kullanılan bir yapay zeka sisteminin hastalık teşhisi yaptığını düşünelim. Black box bir modelde kararların nasıl üretildiği doğrudan gözlemlenemediği için belirli hasta gruplarını etkileyen sistematik hatalar ancak gerçek dünyada zarar oluşturmaya başladığında fark edilebilir.
+
+Örneğin model, eğitim verilerinde yeterince temsil edilmeyen 65 yaş üstü hastalarda hata oranı çok yüksek olabilir, belirli bir etnik grupta yanlış teşhis koyuyor olabilir veya düşük çözünürlüklü görüntüler geldiğinde performansı düşüyor olabilir. Ancak modelin iç işleyişi doğrudan incelenemediği için bu tür sorunlar önceden tespit edilemeyebilir. Sonuç olarak modelin ürettiği hatalı kararlar ancak gerçek dünyada yanlış teşhisler ve olumsuz sonuçlar ortaya çıkmaya başladıktan sonra anlaşılabilir. Bu durum, sistemin güvenilirliğinin değerlendirilmesini ve olası risklerin erken aşamada belirlenmesini güçleştirmektedir.
+
+## Manipülasyon ve Kötüye Kullanım Riskleri (Gaming and Manipulation)
+
+Bir karar mekanizmasının hangi kriterlere göre çalıştığı bilinmediğinde insanlar sistemden nasıl adil sonuç alabileceklerini de bilemezler. Örneğin bir kredi değerlendirme sisteminin hangi faktörleri dikkate aldığı tamamen bilinmiyorsa, kullanıcılar hangi davranışların olumlu veya olumsuz sonuçlar doğurduğunu anlayamazlar. Benzer şekilde kötü niyetli kişiler de sistemin hangi davranışları tespit ettiğini veya hangi davranışlardan kaçınmaları gerektiğini analiz etmekte zorlanabilirler.
+
+## Bilimsel Şeffaflık Sorunu (Scientific Opacity)
+
+Günümüzde büyük dil modelleri çok büyük miktarda bilgi içermektedir. Ancak bu bilgilerin model içerisinde nasıl temsil edildiği ve belirli sonuçlara nasıl ulaşıldığı çoğu zaman bilinmemektedir. Bir model tarafından üretilen sonucun hangi bilgiye dayandığı doğrulanamıyorsa, bilimsel tekrarlanabilirlik ve doğrulanabilirlik ilkeleri de zayıflamaktadır.
+
+## Düzenleyici ve Hukuki Zorluklar (Regulatory Challenges)
+
+Birçok düzenleme, otomatik karar verme sistemlerinden etkilenen bireylere belirli düzeyde açıklama sunulmasını gerektirmektedir. Fakat tamamen black box olarak çalışan bir sistem bu açıklamaları sağlamakta zorlanabilir. Bu durum özellikle GDPR Madde 22, Avrupa Birliği AI Act ve benzeri düzenlemeler kapsamında yapay zeka kullanan kuruluşlar için önemli hukuki ve uyumluluk sorunları oluşturabilmektedir.
