@@ -7,19 +7,3 @@ AI Model Reverse Engineering alanında hazırladığım araştırma notlarını,
 |--------|----------|
 | [Black-box Problemi](black-box-problemi.md) | Black-box problemini AI güvenliği perspektifinden ele alan teknik inceleme |
 | [Reverse Engineering Sürecinde Sorulması Gereken Sorular](RE-sureci-sorular.md) | AI model reverse engineering sürecinde izlenebilecek analiz yaklaşımı |
-
-## Konular
-
-- AI Model Reverse Engineering
-- Black-box Analysis
-- White-box Analysis
-- Model Behavior Analysis
-- Model Interpretability
-- Model Explainability
-- LLM Security
-- Threat Modeling for AI Systems
-- AI Security Risk Assessment
-
-## Amaç
-
-AI Model Reverse Engineering alanındaki çalışmalarımı tek bir yerde toplamak ve zaman içerisinde yeni araştırma notları, teknik makaleler, örnek analizler ve uygulamalı çalışmalarla bu içeriği sürekli geliştirmek.
