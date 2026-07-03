@@ -199,3 +199,15 @@ Araştırmacılar ayrıca farklı erişim seviyelerinin hangi değerlendirme ve 
 *Şekil: Farklı erişim seviyelerinde uygulanabilen değerlendirme ve analiz yöntemlerinin karşılaştırılması. Black box erişim temel davranış analizleri ve manuel saldırılarla sınırlıyken, gradient tabanlı saldırılar, mechanistic interpretability ve fine-tuning gibi yöntemler daha yüksek erişim seviyeleri gerektirmektedir. Outside-the-box erişim ise sistem hakkında yayınlanan ek bilgi kaynaklarının incelenmesine odaklanmaktadır. Kaynak:* Black-Box Access is Insufficient for Rigorous AI Audits *(2024).*
 
 Uygulanabilecek analiz yöntemleri, araştırmacının sisteme ne düzeyde erişebildiğine bağlı olarak değişmektedir. Black box erişim altında test setleri, manuel saldırılar ve davranış analizleri gerçekleştirilebilirken, gradient tabanlı saldırılar, latent space analizleri, mechanistic interpretability çalışmaları ve fine-tuning gibi yöntemler daha yüksek düzeyde erişim gerektirmektedir. Buna karşılık outside-the-box erişim, modelin iç işleyişinden ziyade sistem hakkında yayınlanan ek bilgi kaynaklarının incelenmesine olanak sağlamaktadır. Bu durum, yapay zeka sistemlerinin değerlendirilmesinde erişim seviyesinin doğrudan kullanılabilecek analiz yöntemlerini belirlediğini ve güvenlik değerlendirmelerinin yalnızca modele değil, sistem hakkında erişilebilen tüm bilgi kaynaklarına da dayanabileceğini göstermektedir.
+
+# Referanslar
+
+1. AI Security Risk: From Foundations to Secure Operations. *Artificial Intelligence Model Reverse Engineering* Course Notes.
+
+2. Casper, S., et al. (2024). *Black-Box Access is Insufficient for Rigorous AI Audits*. arXiv. https://arxiv.org/abs/2401.14446
+
+3. Cherepanova, V., Casper, S., Zou, J., et al. (2025). *The Foundation Model Transparency Index (FMTI)*. Stanford Center for Research on Foundation Models. https://crfm.stanford.edu/fmti/
+
+4. Goodfellow, I., Shlens, J., & Szegedy, C. (2015). *Explaining and Harnessing Adversarial Examples*. International Conference on Learning Representations (ICLR). https://arxiv.org/abs/1412.6572
+
+5. OpenAI. *Transformer Explainer*. https://transformer-explainer.io/
